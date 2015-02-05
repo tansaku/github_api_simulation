@@ -8,7 +8,8 @@ app.get('/', function(request, response){
   response.send('Github API Simulation');
 });
 
-app.get('/user/:user', function(request, response){
+app.get('/users/:user', function(request, response){
+  response.header('Access-Control-Allow-Origin','*');
   response.render(request.params.user);
 });
 
