@@ -10,6 +10,7 @@ app.get('/', function(request, response){
 
 app.get('/users/:user', function(request, response){
   response.header('Access-Control-Allow-Origin','*');
+  response.header('Content-Type','application/json; charset=utf-8');
   response.render(request.params.user);
 });
 
