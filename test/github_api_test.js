@@ -21,4 +21,10 @@ describe('Github API Simulation', function(){
     });
   });
 
+  it('should return JSON for a another user', function(){
+    casper.thenOpen(host + '/user/henrygarner', function(){
+      expect('body').to.have.text('{"login":"henrygarner"}');
+    });
+  });
+
 });

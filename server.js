@@ -6,8 +6,8 @@ app.get('/', function(request, response){
   response.send('Github API Simulation');
 });
 
-app.get('/user/tansaku', function(request, response){
-  response.json({login: 'tansaku'});
+app.get('/user/:user', function(request, response){
+  response.json({login: request.params.user});
 });
 
 server.listen(port, function(){
