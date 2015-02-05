@@ -10,7 +10,7 @@ describe('Github API Simulation', function(){
 
   it('should return user data in json format', function(){
     casper.then(function(response){
-      expect('body').to.have.text('Github API Simulation');
+      expect('body').to.include.text('Enter a Github username');
     });
   });
 
