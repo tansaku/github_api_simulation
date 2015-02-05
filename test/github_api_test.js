@@ -3,7 +3,6 @@ var expect = chai.expect;
 
 var host = 'http://localhost:9999';
 
-
 describe('Github API Simulation', function(){
   before(function(){
     casper.start(host);
@@ -17,13 +16,13 @@ describe('Github API Simulation', function(){
 
   it('should return JSON for a particular user', function(){
     casper.thenOpen(host + '/user/tansaku', function(){
-      expect('body').to.have.text('{"login":"tansaku"}');
+      expect('body').to.have.text('{"login":"tansaku", "followers":"12"}');
     });
   });
 
   it('should return JSON for a another user', function(){
     casper.thenOpen(host + '/user/henrygarner', function(){
-      expect('body').to.have.text('{"login":"henrygarner"}');
+      expect('body').to.have.text('{"login":"henrygarner", "followers":"15"}');
     });
   });
 
